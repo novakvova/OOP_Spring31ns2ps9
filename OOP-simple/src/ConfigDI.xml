@@ -15,7 +15,12 @@
     	 <property name="email" value="vaz@mail.ru"/>
     </bean> -->
     	  
-    <bean id="myCar" class="CarTesla" scope="prototype">
+    <bean id="myCar" 
+    	class="CarTesla" 
+    	
+    	init-method="InitObject"
+    	destroy-method="DestroyObject">
+    	
     	 <constructor-arg ref="myEngine"/>
     </bean>
    
