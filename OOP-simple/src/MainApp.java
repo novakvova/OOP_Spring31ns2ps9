@@ -8,9 +8,9 @@ public class MainApp {
 				new ClassPathXmlApplicationContext("ConfigDI.xml");
 		
 		//System.out.println("Hello");
-		Engine engine =  context.getBean("myEngine", Engine.class);  //new EngineElectro(); new EngineLanos(); //new EngineAudi();
+		//Engine engine =  context.getBean("myEngine", Engine.class);  //new EngineElectro(); new EngineLanos(); //new EngineAudi();
 		//engine.start();
-		Car car = new CarTesla(engine);
+		Car car = context.getBean("myCar", Car.class); //new CarTesla(engine);
 		car.drive();
 		
 		context.close();
