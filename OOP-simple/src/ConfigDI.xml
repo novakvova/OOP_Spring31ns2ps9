@@ -9,9 +9,14 @@
     
     <bean id="myEngine"
     	class="EngineElectro" />
-    	
-    <bean id="myCar" class="CarTesla">
-    	<constructor-arg ref="myEngine"/>
+    <bean id="myCar" class="CarZuhuli">
+    	 <property name="engine" ref="myEngine"/>
+    	 <property name="email" value="vaz@mail.ru"/>
     </bean>
+    	<!--  
+    <bean id="myCar" class="CarTesla">
+    	 <constructor-arg ref="myEngine"/>
+    </bean>
+    -->
     
 </beans>
