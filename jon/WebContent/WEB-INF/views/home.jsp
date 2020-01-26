@@ -8,5 +8,7 @@
 </head>
 <body>
 	<h1>Hello app</h1>
+	
+	<a href="${pageContext.request.contextPath}/login">Login</a>
 </body>
 </html>
