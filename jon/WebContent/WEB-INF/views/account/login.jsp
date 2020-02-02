@@ -43,9 +43,6 @@
 				</form:form>
 			</div>
 		</div>
-
-
-
 	</main>
 
 	<jsp:include page="../container/_scripts.jsp"></jsp:include>

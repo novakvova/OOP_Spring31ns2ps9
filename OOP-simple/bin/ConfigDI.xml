@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean id="myEngine"
+    	class="EngineLanos" />
+    	<!--  
+    <bean id="myCar" class="CarZuhuli">
+    	 <property name="engine" ref="myEngine"/>
+    	 <property name="email" value="vaz@mail.ru"/>
+    </bean> -->
+    	  
+    <bean id="myCar" 
+    	class="CarTesla" 
+    	
+    	init-method="InitObject"
+    	destroy-method="DestroyObject">
+    	
+    	 <constructor-arg ref="myEngine"/>
+    </bean>
+   
+    
+</beans>
